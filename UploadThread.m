@@ -10,6 +10,7 @@
 #import <CoreServices/CoreServices.h>
 
 #import "UploadThread.h"
+#import "PUImage.h"
 
 @implementation UploadThread
 
