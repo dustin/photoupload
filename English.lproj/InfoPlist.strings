@@ -2,5 +2,5 @@
 
 CFBundleName = "PhotoUpload";
 CFBundleShortVersionString = "PhotoUpload version 1.0";
-CFBundleGetInfoString = "PhotoUpload version 1.0, Copyright 2004 SPY Internetworking.";
-NSHumanReadableCopyright = "Copyright 2004 SPY Internetworking.";
+CFBundleGetInfoString = "PhotoUpload version 1.0, Copyright 2004-2005 SPY Internetworking.";
+NSHumanReadableCopyright = "Copyright 2004-2005 SPY Internetworking.";
