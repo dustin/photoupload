@@ -56,7 +56,7 @@
         NSLog(@"Uploading %@.", f);
 
         // Get the file data
-        NSData *myData = [[NSData alloc] initWithContentsOfFile:f];
+        NSData *myData = [[NSData alloc] initWithContentsOfFile:[f filename]];
         [dict setObject:myData forKey:@"image"];
 
 		NSDictionary *argDict=[NSDictionary dictionaryWithObject:dict

@@ -6,6 +6,7 @@
 #import "UploadThread.h"
 #import "UploadParams.h"
 #import "SizeScaler.h"
+#import "PUImageList.h"
 
 @interface UploadController (Private)
 
@@ -123,13 +124,12 @@
         [description setStringValue: [batch description]];
         [keywords setStringValue: [batch keywords]];
 
-        [imgMatrix clear];
+        [imgStorage removeAllObjects];
         NSEnumerator *e=[[batch files] objectEnumerator];
         id object;
         while(object = [e nextObject]) {
-            [imgMatrix addFile: object];
+            [imgStorage addPath: object];
         }
-        [imgMatrix update];
     }
 }
 
@@ -144,7 +144,7 @@
     if(_batchController != nil && (kw == [_batchController window])) {
         [[_batchController imgMatrix] clear];
     } else {
-        [imgMatrix clear];
+        [imgStorage removeAllObjects];
     }
 }
 
@@ -154,7 +154,7 @@
     if(_batchController != nil && (kw == [_batchController window])) {
         [[_batchController imgMatrix] removeSelected];
     } else {
-        [imgMatrix removeSelected];
+        [imgStorage removeSelected];
     }
 }
 
@@ -178,24 +178,25 @@
         // This is what's displayed in the image box.
         int i=0;
         for(i=0; i<[files count]; i++) {
-            [imgMatrix addFile: [files objectAtIndex: i]];
+			[imgStorage addPath: [files objectAtIndex: i]];
         }
     }
-    [imgMatrix update];
 }
 
 - (IBAction)showFiles:(id)sender
 {
-    NSLog(@"Files:  %@\n", [imgMatrix files]);
+    NSLog(@"Files:  %@", imgStorage);
 }
 
 - (IBAction)showSelectedImages:(id)sender
 {
+	/*
     NSArray *a=[imgMatrix selectedCells];
     int i=0;
     for(i=0; i<[a count]; i++) {
         NSLog(@"Selected image:  %@\n", [[a objectAtIndex: i] image]);
     }
+	*/
 }
 
 - (IBAction)stopUpload:(id)sender
@@ -226,7 +227,7 @@
     
 	Batch *batch=[[Batch alloc] init];
 
-    NSArray *files=[imgMatrix files];
+    NSArray *files=[imgStorage images];
     [batch setUrl: [url stringValue]];
     [batch setUsername: u];
     [batch setPassword: p];
@@ -263,7 +264,7 @@
                                          toTarget:ut withObject: params];
 
     [self setButtonAction: BUTTON_STOP];
-    [addFilesButton setEnabled: FALSE];
+    // [addFilesButton setEnabled: FALSE];
     [ut release];
 }
 
@@ -293,10 +294,10 @@
 
 - (void)updateProgressText
 {
-    if(currentFile <= [[imgMatrix files] count])
+    if(currentFile <= [imgStorage count])
     {
         NSString *msg=[NSString stringWithFormat:_str(@"UploadingText"),
-            currentFile, [[imgMatrix files] count]];
+            currentFile, [imgStorage count]];
         [uploadingText setStringValue: msg];
         [uploadingText displayIfNeeded];
     }
@@ -335,7 +336,7 @@
 -(void)uploadComplete
 {
     NSLog(@"Upload is complete.\n");
-    [addFilesButton setEnabled: TRUE];
+    // [addFilesButton setEnabled: TRUE];
     [uploadingText setHidden: TRUE];
     [progressBar setMinValue: 0];
     [progressBar setMaxValue: 0];
@@ -368,9 +369,11 @@
     // Fill in form entries with defaults
     [self dateToToday: self];
 
-    [imgMatrix clear];
+    [imgStorage removeAllObjects];
+	/*
     [imgMatrix registerForDraggedTypes:[NSArray arrayWithObjects:
         NSFilenamesPboardType, nil]];
+	*/
 
     [authWindow makeKeyAndOrderFront: self];    
 }

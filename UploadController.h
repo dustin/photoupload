@@ -14,22 +14,20 @@
 
 @interface UploadController : NSObject
 {
-    IBOutlet NSButton *addFilesButton;
     IBOutlet NSWindow *authWindow;
     IBOutlet NSPopUpButton *categories;
     IBOutlet NSTextField *dateTaken;
     IBOutlet NSTextField *description;
-    IBOutlet NSTextField *fileCount;
-    IBOutlet DumpMatrix *imgMatrix;
     IBOutlet NSTextField *keywords;
     IBOutlet NSSecureTextField *password;
     IBOutlet NSProgressIndicator *progressBar;
-    IBOutlet NSScrollView *scroller;
     IBOutlet NSButton *uploadButton;
     IBOutlet NSTextField *uploadingText;
     IBOutlet NSWindow *uploadWindow;
     IBOutlet NSTextField *url;
     IBOutlet NSTextField *username;
+
+	IBOutlet id imgStorage;
 
     NSUserDefaults *defaults;
 
