@@ -1,6 +1,6 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleName = "PhotoUpload";
-CFBundleShortVersionString = "PhotoUpload version 1.0";
-CFBundleGetInfoString = "PhotoUpload version 1.0, Copyright 2004-2005 SPY Internetworking.";
+CFBundleShortVersionString = "PhotoUpload version 1.1";
+CFBundleGetInfoString = "PhotoUpload version 1.1, Copyright 2004-2005 SPY Internetworking.";
 NSHumanReadableCopyright = "Copyright 2004-2005 SPY Internetworking.";
