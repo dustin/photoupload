@@ -9,10 +9,6 @@
 			children = (
 				F5601AF00353732F0109FEFA,
 				F5601AF10353732F0109FEFA,
-				F5601AF20353732F0109FEFA,
-				F5601AF30353732F0109FEFA,
-				F5601AF40353732F0109FEFA,
-				F5601AF50353732F0109FEFA,
 				F5601AF60353732F0109FEFA,
 				F5601AF70353732F0109FEFA,
 				F5601AF80353732F0109FEFA,
@@ -287,8 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACD4B6607FA616E009C4765,
-				DACD4B6707FA616E009C4765,
-				DACD4B6807FA616E009C4765,
 				DACD4B6907FA616E009C4765,
 				DACD4B6A07FA616E009C4765,
 				DACD4B6B07FA616E009C4765,
@@ -303,18 +297,6 @@
 		};
 		DACD4B6607FA616E009C4765 = {
 			fileRef = F5601AF00353732F0109FEFA;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		DACD4B6707FA616E009C4765 = {
-			fileRef = F5601AF20353732F0109FEFA;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		DACD4B6807FA616E009C4765 = {
-			fileRef = F5601AF40353732F0109FEFA;
 			isa = PBXBuildFile;
 			settings = {
 			};
@@ -428,8 +410,6 @@
 			files = (
 				DACD4B7A07FA616E009C4765,
 				DACD4B7B07FA616E009C4765,
-				DACD4B7C07FA616E009C4765,
-				DACD4B7D07FA616E009C4765,
 				DACD4B7E07FA616E009C4765,
 				DACD4B7F07FA616E009C4765,
 				DACD4B8007FA616E009C4765,
@@ -451,18 +431,6 @@
 		};
 		DACD4B7B07FA616E009C4765 = {
 			fileRef = F5601AF10353732F0109FEFA;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		DACD4B7C07FA616E009C4765 = {
-			fileRef = F5601AF30353732F0109FEFA;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		DACD4B7D07FA616E009C4765 = {
-			fileRef = F5601AF50353732F0109FEFA;
 			isa = PBXBuildFile;
 			settings = {
 			};
@@ -592,38 +560,6 @@
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.objc;
 			path = DumpMatrix.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		F5601AF20353732F0109FEFA = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = HideableProgressIndicator.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		F5601AF30353732F0109FEFA = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = HideableProgressIndicator.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		F5601AF40353732F0109FEFA = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = HideableTextField.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		F5601AF50353732F0109FEFA = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = HideableTextField.m;
 			refType = 4;
 			sourceTree = "<group>";
 		};

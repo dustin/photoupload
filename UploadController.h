@@ -2,8 +2,6 @@
 // arch-tag: 69EE517C-9196-11D8-ABF6-000A957659CC
 
 #import <Cocoa/Cocoa.h>
-#import "HideableTextField.h"
-#import "HideableProgressIndicator.h"
 #import "UploadParams.h"
 #import "DumpMatrix.h"
 #import "Batch.h"
@@ -25,10 +23,10 @@
     IBOutlet DumpMatrix *imgMatrix;
     IBOutlet NSTextField *keywords;
     IBOutlet NSSecureTextField *password;
-    IBOutlet HideableProgressIndicator *progressBar;
+    IBOutlet NSProgressIndicator *progressBar;
     IBOutlet NSScrollView *scroller;
     IBOutlet NSButton *uploadButton;
-    IBOutlet HideableTextField *uploadingText;
+    IBOutlet NSTextField *uploadingText;
     IBOutlet NSWindow *uploadWindow;
     IBOutlet NSTextField *url;
     IBOutlet NSTextField *username;

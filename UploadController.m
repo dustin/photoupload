@@ -351,8 +351,6 @@
     // Set up windows
     [uploadWindow orderOut: self];
     [progressBar setDisplayedWhenStopped: FALSE];
-    [progressBar setHidden: TRUE];
-    [uploadingText setHidden: TRUE];
     // Initialize the button
     buttonType=BUTTON_UPLOAD;
     [self setButtonAction: buttonType];
