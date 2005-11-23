@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA6AD91B07FA90A900E2D4EF /* PUImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6AD91907FA90A900E2D4EF /* PUImage.h */; };
+		DA6AD91C07FA90A900E2D4EF /* PUImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AD91A07FA90A900E2D4EF /* PUImage.m */; };
+		DA6AD93107FA997D00E2D4EF /* PUImageList.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6AD92F07FA997D00E2D4EF /* PUImageList.h */; };
+		DA6AD93207FA997D00E2D4EF /* PUImageList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AD93007FA997D00E2D4EF /* PUImageList.m */; };
+		DACD4B6407FA616E009C4765 /* BatchUpload.nib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5BAF2CF036CDA2401ED6A41 /* BatchUpload.nib */; };
+		DACD4B6607FA616E009C4765 /* DumpMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = F5601AF00353732F0109FEFA /* DumpMatrix.h */; };
+		DACD4B6907FA616E009C4765 /* SizeScaler.h in Headers */ = {isa = PBXBuildFile; fileRef = F5601AF60353732F0109FEFA /* SizeScaler.h */; };
+		DACD4B6A07FA616E009C4765 /* UploadController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5601AF80353732F0109FEFA /* UploadController.h */; };
+		DACD4B6B07FA616E009C4765 /* UploadParams.h in Headers */ = {isa = PBXBuildFile; fileRef = F5601AFA0353732F0109FEFA /* UploadParams.h */; };
+		DACD4B6C07FA616E009C4765 /* UploadThread.h in Headers */ = {isa = PBXBuildFile; fileRef = F5601AFC0353732F0109FEFA /* UploadThread.h */; };
+		DACD4B6D07FA616E009C4765 /* Batch.h in Headers */ = {isa = PBXBuildFile; fileRef = F5BA4842035523AD01A801C4 /* Batch.h */; };
+		DACD4B6E07FA616E009C4765 /* BatchController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A4F41B0356A76901A801C4 /* BatchController.h */; };
+		DACD4B6F07FA616E009C4765 /* PhotoUpload.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D1960F03628AC801A801C4 /* PhotoUpload.h */; };
+		DACD4B7007FA616E009C4765 /* BatchUploadController.h in Headers */ = {isa = PBXBuildFile; fileRef = F5BAF2D2036CDA3201ED6A41 /* BatchUploadController.h */; };
+		DACD4B7207FA616E009C4765 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F5D196110362933F01A801C4 /* Credits.html */; };
+		DACD4B7307FA616E009C4765 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D1960A0362869401A801C4 /* Localizable.strings */; };
+		DACD4B7407FA616E009C4765 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5601B13035373480109FEFA /* InfoPlist.strings */; };
+		DACD4B7507FA616E009C4765 /* PhotoUpload.icns in Resources */ = {isa = PBXBuildFile; fileRef = F52C09B603540EAB01A801C4 /* PhotoUpload.icns */; };
+		DACD4B7607FA616E009C4765 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = F5601B15035373480109FEFA /* MainMenu.nib */; };
+		DACD4B7707FA616E009C4765 /* PhotoUploadBatch.nib in Resources */ = {isa = PBXBuildFile; fileRef = F5A4F4180356A6BE01A801C4 /* PhotoUploadBatch.nib */; };
+		DACD4B7807FA616E009C4765 /* BatchUpload.nib in Resources */ = {isa = PBXBuildFile; fileRef = F5BAF2CF036CDA2401ED6A41 /* BatchUpload.nib */; };
+		DACD4B7A07FA616E009C4765 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		DACD4B7B07FA616E009C4765 /* DumpMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = F5601AF10353732F0109FEFA /* DumpMatrix.m */; };
+		DACD4B7E07FA616E009C4765 /* SizeScaler.m in Sources */ = {isa = PBXBuildFile; fileRef = F5601AF70353732F0109FEFA /* SizeScaler.m */; };
+		DACD4B7F07FA616E009C4765 /* UploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5601AF90353732F0109FEFA /* UploadController.m */; };
+		DACD4B8007FA616E009C4765 /* UploadParams.m in Sources */ = {isa = PBXBuildFile; fileRef = F5601AFB0353732F0109FEFA /* UploadParams.m */; };
+		DACD4B8107FA616E009C4765 /* UploadThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F5601AFD0353732F0109FEFA /* UploadThread.m */; };
+		DACD4B8207FA616E009C4765 /* Batch.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BA4843035523AD01A801C4 /* Batch.m */; };
+		DACD4B8307FA616E009C4765 /* BatchController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A4F41C0356A76901A801C4 /* BatchController.m */; };
+		DACD4B8407FA616E009C4765 /* BatchUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF2D3036CDA3201ED6A41 /* BatchUploadController.m */; };
+		DACD4B8607FA616E009C4765 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE5B138063353930026182E /* CoreServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OPTIMIZATION_CFLAGS = "-Os";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DACD4B6307FA616E009C4765 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DACD4B6407FA616E009C4765 /* BatchUpload.nib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		DA6AD91907FA90A900E2D4EF /* PUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImage.h; sourceTree = "<group>"; };
+		DA6AD91A07FA90A900E2D4EF /* PUImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImage.m; sourceTree = "<group>"; };
+		DA6AD92F07FA997D00E2D4EF /* PUImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImageList.h; sourceTree = "<group>"; };
+		DA6AD93007FA997D00E2D4EF /* PUImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImageList.m; sourceTree = "<group>"; };
+		DACD4B8807FA616E009C4765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE5B138063353930026182E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		F52C09B603540EAB01A801C4 /* PhotoUpload.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PhotoUpload.icns; sourceTree = "<group>"; };
+		F5601AEF0353732F0109FEFA /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = English.lproj/Credits.html; sourceTree = "<group>"; };
+		F5601AF00353732F0109FEFA /* DumpMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumpMatrix.h; sourceTree = "<group>"; };
+		F5601AF10353732F0109FEFA /* DumpMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DumpMatrix.m; sourceTree = "<group>"; };
+		F5601AF60353732F0109FEFA /* SizeScaler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeScaler.h; sourceTree = "<group>"; };
+		F5601AF70353732F0109FEFA /* SizeScaler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeScaler.m; sourceTree = "<group>"; };
+		F5601AF80353732F0109FEFA /* UploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadController.h; sourceTree = "<group>"; };
+		F5601AF90353732F0109FEFA /* UploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadController.m; sourceTree = "<group>"; };
+		F5601AFA0353732F0109FEFA /* UploadParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadParams.h; sourceTree = "<group>"; };
+		F5601AFB0353732F0109FEFA /* UploadParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadParams.m; sourceTree = "<group>"; };
+		F5601AFC0353732F0109FEFA /* UploadThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadThread.h; sourceTree = "<group>"; };
+		F5601AFD0353732F0109FEFA /* UploadThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadThread.m; sourceTree = "<group>"; };
+		F5601B14035373480109FEFA /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5601B16035373480109FEFA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		F5A4F4190356A6BE01A801C4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PhotoUploadBatch.nib; sourceTree = "<group>"; };
+		F5A4F41B0356A76901A801C4 /* BatchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatchController.h; sourceTree = "<group>"; };
+		F5A4F41C0356A76901A801C4 /* BatchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatchController.m; sourceTree = "<group>"; };
+		F5BA4842035523AD01A801C4 /* Batch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Batch.h; sourceTree = "<group>"; };
+		F5BA4843035523AD01A801C4 /* Batch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Batch.m; sourceTree = "<group>"; };
+		F5BAF2D0036CDA2401ED6A41 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BatchUpload.nib; sourceTree = "<group>"; };
+		F5BAF2D2036CDA3201ED6A41 /* BatchUploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatchUploadController.h; sourceTree = "<group>"; };
+		F5BAF2D3036CDA3201ED6A41 /* BatchUploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatchUploadController.m; sourceTree = "<group>"; };
+		F5D1960B0362869401A801C4 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5D1960F03628AC801A801C4 /* PhotoUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoUpload.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DACD4B8507FA616E009C4765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACD4B8607FA616E009C4765 /* Cocoa.framework in Frameworks */,
+				DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA6AD92F07FA997D00E2D4EF /* PUImageList.h */,
+				DA6AD93007FA997D00E2D4EF /* PUImageList.m */,
+				DA6AD91907FA90A900E2D4EF /* PUImage.h */,
+				DA6AD91A07FA90A900E2D4EF /* PUImage.m */,
+				F5601AF00353732F0109FEFA /* DumpMatrix.h */,
+				F5601AF10353732F0109FEFA /* DumpMatrix.m */,
+				F5601AF60353732F0109FEFA /* SizeScaler.h */,
+				F5601AF70353732F0109FEFA /* SizeScaler.m */,
+				F5601AF80353732F0109FEFA /* UploadController.h */,
+				F5601AF90353732F0109FEFA /* UploadController.m */,
+				F5601AFA0353732F0109FEFA /* UploadParams.h */,
+				F5601AFB0353732F0109FEFA /* UploadParams.m */,
+				F5601AFC0353732F0109FEFA /* UploadThread.h */,
+				F5601AFD0353732F0109FEFA /* UploadThread.m */,
+				F5BA4842035523AD01A801C4 /* Batch.h */,
+				F5BA4843035523AD01A801C4 /* Batch.m */,
+				F5A4F41B0356A76901A801C4 /* BatchController.h */,
+				F5A4F41C0356A76901A801C4 /* BatchController.m */,
+				F5D1960F03628AC801A801C4 /* PhotoUpload.h */,
+				F5BAF2D2036CDA3201ED6A41 /* BatchUploadController.h */,
+				F5BAF2D3036CDA3201ED6A41 /* BatchUploadController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DACD4B8907FA616E009C4765 /* PhotoUpload.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* PhotoUpload */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				DACD4B8807FA616E009C4765 /* Info.plist */,
+			);
+			name = PhotoUpload;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5D1960A0362869401A801C4 /* Localizable.strings */,
+				F52C09B603540EAB01A801C4 /* PhotoUpload.icns */,
+				F5601B13035373480109FEFA /* InfoPlist.strings */,
+				F5601B15035373480109FEFA /* MainMenu.nib */,
+				F5D196110362933F01A801C4 /* Credits.html */,
+				F5A4F4180356A6BE01A801C4 /* PhotoUploadBatch.nib */,
+				F5BAF2CF036CDA2401ED6A41 /* BatchUpload.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAE5B138063353930026182E /* CoreServices.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DACD4B6507FA616E009C4765 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACD4B6607FA616E009C4765 /* DumpMatrix.h in Headers */,
+				DACD4B6907FA616E009C4765 /* SizeScaler.h in Headers */,
+				DACD4B6A07FA616E009C4765 /* UploadController.h in Headers */,
+				DACD4B6B07FA616E009C4765 /* UploadParams.h in Headers */,
+				DACD4B6C07FA616E009C4765 /* UploadThread.h in Headers */,
+				DACD4B6D07FA616E009C4765 /* Batch.h in Headers */,
+				DACD4B6E07FA616E009C4765 /* BatchController.h in Headers */,
+				DACD4B6F07FA616E009C4765 /* PhotoUpload.h in Headers */,
+				DACD4B7007FA616E009C4765 /* BatchUploadController.h in Headers */,
+				DA6AD91B07FA90A900E2D4EF /* PUImage.h in Headers */,
+				DA6AD93107FA997D00E2D4EF /* PUImageList.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DACD4B6207FA616E009C4765 /* PhotoUpload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA543B9209352A6C00185AF3 /* Build configuration list for PBXNativeTarget "PhotoUpload" */;
+			buildPhases = (
+				DACD4B6307FA616E009C4765 /* CopyFiles */,
+				DACD4B6507FA616E009C4765 /* Headers */,
+				DACD4B7107FA616E009C4765 /* Resources */,
+				DACD4B7907FA616E009C4765 /* Sources */,
+				DACD4B8507FA616E009C4765 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "/Users/dustin/My Apps";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = PhotoUpload;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = PhotoUpload;
+			productInstallPath = "/Users/dustin/My Apps";
+			productName = PhotoUpload;
+			productReference = DACD4B8907FA616E009C4765 /* PhotoUpload.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = DA543B9609352A6C00185AF3 /* Build configuration list for PBXProject "PhotoUpload" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Development */,
+				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* PhotoUpload */;
+			projectDirPath = "";
+			targets = (
+				DACD4B6207FA616E009C4765 /* PhotoUpload */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DACD4B7107FA616E009C4765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACD4B7207FA616E009C4765 /* Credits.html in Resources */,
+				DACD4B7307FA616E009C4765 /* Localizable.strings in Resources */,
+				DACD4B7407FA616E009C4765 /* InfoPlist.strings in Resources */,
+				DACD4B7507FA616E009C4765 /* PhotoUpload.icns in Resources */,
+				DACD4B7607FA616E009C4765 /* MainMenu.nib in Resources */,
+				DACD4B7707FA616E009C4765 /* PhotoUploadBatch.nib in Resources */,
+				DACD4B7807FA616E009C4765 /* BatchUpload.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DACD4B7907FA616E009C4765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACD4B7A07FA616E009C4765 /* main.m in Sources */,
+				DACD4B7B07FA616E009C4765 /* DumpMatrix.m in Sources */,
+				DACD4B7E07FA616E009C4765 /* SizeScaler.m in Sources */,
+				DACD4B7F07FA616E009C4765 /* UploadController.m in Sources */,
+				DACD4B8007FA616E009C4765 /* UploadParams.m in Sources */,
+				DACD4B8107FA616E009C4765 /* UploadThread.m in Sources */,
+				DACD4B8207FA616E009C4765 /* Batch.m in Sources */,
+				DACD4B8307FA616E009C4765 /* BatchController.m in Sources */,
+				DACD4B8407FA616E009C4765 /* BatchUploadController.m in Sources */,
+				DA6AD91C07FA90A900E2D4EF /* PUImage.m in Sources */,
+				DA6AD93207FA997D00E2D4EF /* PUImageList.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5601B13035373480109FEFA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5601B14035373480109FEFA /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5601B15035373480109FEFA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5601B16035373480109FEFA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		F5A4F4180356A6BE01A801C4 /* PhotoUploadBatch.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5A4F4190356A6BE01A801C4 /* English */,
+			);
+			name = PhotoUploadBatch.nib;
+			sourceTree = "<group>";
+		};
+		F5BAF2CF036CDA2401ED6A41 /* BatchUpload.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5BAF2D0036CDA2401ED6A41 /* English */,
+			);
+			name = BatchUpload.nib;
+			sourceTree = "<group>";
+		};
+		F5D1960A0362869401A801C4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D1960B0362869401A801C4 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F5D196110362933F01A801C4 /* Credits.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5601AEF0353732F0109FEFA /* Credits.html */,
+			);
+			name = Credits.html;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA543B9309352A6C00185AF3 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "/Users/dustin/My Apps";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = PhotoUpload;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		DA543B9409352A6C00185AF3 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "/Users/dustin/My Apps";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-Os";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = PhotoUpload;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		DA543B9509352A6C00185AF3 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "/Users/dustin/My Apps";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = PhotoUpload;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		DA543B9709352A6C00185AF3 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		DA543B9809352A6C00185AF3 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		DA543B9909352A6C00185AF3 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA543B9209352A6C00185AF3 /* Build configuration list for PBXNativeTarget "PhotoUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA543B9309352A6C00185AF3 /* Development */,
+				DA543B9409352A6C00185AF3 /* Deployment */,
+				DA543B9509352A6C00185AF3 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		DA543B9609352A6C00185AF3 /* Build configuration list for PBXProject "PhotoUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA543B9709352A6C00185AF3 /* Development */,
+				DA543B9809352A6C00185AF3 /* Deployment */,
+				DA543B9909352A6C00185AF3 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
