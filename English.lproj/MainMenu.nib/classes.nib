@@ -1,6 +1,12 @@
 {
     IBClasses = (
         {CLASS = DumpMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            CLASS = DumpTable; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {imgStorage = id; }; 
+            SUPERCLASS = NSTableView; 
+        }, 
         {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
             CLASS = HideableProgressIndicator; 

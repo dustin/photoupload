@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA543BA309352C7C00185AF3 /* DumpTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DA543BA109352C7C00185AF3 /* DumpTable.h */; };
+		DA543BA409352C7C00185AF3 /* DumpTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA543BA209352C7C00185AF3 /* DumpTable.m */; };
 		DA6AD91B07FA90A900E2D4EF /* PUImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6AD91907FA90A900E2D4EF /* PUImage.h */; };
 		DA6AD91C07FA90A900E2D4EF /* PUImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AD91A07FA90A900E2D4EF /* PUImage.m */; };
 		DA6AD93107FA997D00E2D4EF /* PUImageList.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6AD92F07FA997D00E2D4EF /* PUImageList.h */; };
@@ -86,12 +88,14 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		DA543BA109352C7C00185AF3 /* DumpTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumpTable.h; sourceTree = "<group>"; };
+		DA543BA209352C7C00185AF3 /* DumpTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DumpTable.m; sourceTree = "<group>"; };
 		DA6AD91907FA90A900E2D4EF /* PUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImage.h; sourceTree = "<group>"; };
 		DA6AD91A07FA90A900E2D4EF /* PUImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImage.m; sourceTree = "<group>"; };
 		DA6AD92F07FA997D00E2D4EF /* PUImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImageList.h; sourceTree = "<group>"; };
 		DA6AD93007FA997D00E2D4EF /* PUImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImageList.m; sourceTree = "<group>"; };
 		DACD4B8807FA616E009C4765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
-		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5B138063353930026182E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		F52C09B603540EAB01A801C4 /* PhotoUpload.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PhotoUpload.icns; sourceTree = "<group>"; };
 		F5601AEF0353732F0109FEFA /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = English.lproj/Credits.html; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				F5D1960F03628AC801A801C4 /* PhotoUpload.h */,
 				F5BAF2D2036CDA3201ED6A41 /* BatchUploadController.h */,
 				F5BAF2D3036CDA3201ED6A41 /* BatchUploadController.m */,
+				DA543BA109352C7C00185AF3 /* DumpTable.h */,
+				DA543BA209352C7C00185AF3 /* DumpTable.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				DACD4B7007FA616E009C4765 /* BatchUploadController.h in Headers */,
 				DA6AD91B07FA90A900E2D4EF /* PUImage.h in Headers */,
 				DA6AD93107FA997D00E2D4EF /* PUImageList.h in Headers */,
+				DA543BA309352C7C00185AF3 /* DumpTable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +351,7 @@
 				DACD4B8407FA616E009C4765 /* BatchUploadController.m in Sources */,
 				DA6AD91C07FA90A900E2D4EF /* PUImage.m in Sources */,
 				DA6AD93207FA997D00E2D4EF /* PUImageList.m in Sources */,
+				DA543BA409352C7C00185AF3 /* DumpTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
