@@ -1,0 +1,7 @@
+(^|/)\_darcs($|/)
+(^|/)\.hg($|/)
+(^|/)\.hgtags($|/)
+^PhotoUpload.log$
+^PhotoUpload.state$
+^PhotoUpload.state.old$
+^PhotoUpload.state.journal$
