@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA43FC2A0C03E17100825C06 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA43FC290C03E17100825C06 /* Sparkle.framework */; };
+		DA43FC430C03E19600825C06 /* Sparkle.framework in Add Sparkle */ = {isa = PBXBuildFile; fileRef = DA43FC290C03E17100825C06 /* Sparkle.framework */; };
 		DA543BA309352C7C00185AF3 /* DumpTable.h in Headers */ = {isa = PBXBuildFile; fileRef = DA543BA109352C7C00185AF3 /* DumpTable.h */; };
 		DA543BA409352C7C00185AF3 /* DumpTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA543BA209352C7C00185AF3 /* DumpTable.m */; };
 		DA6AD91B07FA90A900E2D4EF /* PUImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6AD91907FA90A900E2D4EF /* PUImage.h */; };
@@ -43,34 +45,18 @@
 		DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE5B138063353930026182E /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		4A9504CCFFE6A4B311CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OPTIMIZATION_CFLAGS = "-O0";
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		4A9504CDFFE6A4B311CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				OPTIMIZATION_CFLAGS = "-Os";
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXCopyFilesBuildPhase section */
+		DA43FC3F0C03E18200825C06 /* Add Sparkle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA43FC430C03E19600825C06 /* Sparkle.framework in Add Sparkle */,
+			);
+			name = "Add Sparkle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DACD4B6307FA616E009C4765 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +74,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		DA43FC290C03E17100825C06 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		DA543BA109352C7C00185AF3 /* DumpTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumpTable.h; sourceTree = "<group>"; };
 		DA543BA209352C7C00185AF3 /* DumpTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DumpTable.m; sourceTree = "<group>"; };
 		DA6AD91907FA90A900E2D4EF /* PUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImage.h; sourceTree = "<group>"; };
@@ -95,7 +82,7 @@
 		DA6AD92F07FA997D00E2D4EF /* PUImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImageList.h; sourceTree = "<group>"; };
 		DA6AD93007FA997D00E2D4EF /* PUImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImageList.m; sourceTree = "<group>"; };
 		DACD4B8807FA616E009C4765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
-		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5B138063353930026182E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		F52C09B603540EAB01A801C4 /* PhotoUpload.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PhotoUpload.icns; sourceTree = "<group>"; };
 		F5601AEF0353732F0109FEFA /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = English.lproj/Credits.html; sourceTree = "<group>"; };
@@ -130,6 +117,7 @@
 			files = (
 				DACD4B8607FA616E009C4765 /* Cocoa.framework in Frameworks */,
 				DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */,
+				DA43FC2A0C03E17100825C06 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +157,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA43FC290C03E17100825C06 /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -270,25 +259,10 @@
 				DACD4B7107FA616E009C4765 /* Resources */,
 				DACD4B7907FA616E009C4765 /* Sources */,
 				DACD4B8507FA616E009C4765 /* Frameworks */,
+				DA43FC3F0C03E18200825C06 /* Add Sparkle */,
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "/Users/dustin/My Apps";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "";
-				PRODUCT_NAME = PhotoUpload;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = app;
-			};
 			dependencies = (
 			);
 			name = PhotoUpload;
@@ -303,12 +277,6 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = DA543B9609352A6C00185AF3 /* Build configuration list for PBXProject "PhotoUpload" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				4A9504CCFFE6A4B311CA0CBA /* Development */,
-				4A9504CDFFE6A4B311CA0CBA /* Deployment */,
-			);
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PhotoUpload */;
 			projectDirPath = "";
@@ -413,7 +381,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -440,7 +412,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
@@ -463,7 +439,11 @@
 		DA543B9509352A6C00185AF3 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "/Users/dustin/My Apps";

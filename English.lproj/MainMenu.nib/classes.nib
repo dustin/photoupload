@@ -16,6 +16,12 @@
         {CLASS = HideableTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
         {CLASS = PUImageList; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
         {
+            ACTIONS = {checkForUpdates = id; }; 
+            CLASS = SUUpdater; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
             ACTIONS = {
                 authenticate = id; 
                 dateToToday = id; 

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) 2007  Dustin Sallings (dustin@spy.net) -->
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"> 
+
+	<channel>
+		<title>Updates for PhotoUpload</title>
+		<link>http://media.west.spy.net/app/photoupload.xml</link>
+		<description>Recent changes to PhotoUpload</description>
+		<language>en</language>
+		<item>
+			<title>Version 1.2</title>
+			<description>Now with significantly more sparkle</description>
+			<!-- date +"%a, %d %b %Y %H:%M:%S GMT" -->
+			<pubDate>Tue, 22 May 2007 19:30:36 GMT</pubDate>
+			<enclosure url="http://media.west.spy.net/app/PhotoUpload_1.2.zip"
+				length="x" type="application/octet-stream"/>
+		</item>
+	</channel>
+</rss>

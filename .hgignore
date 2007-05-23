@@ -1,7 +1,10 @@
-(^|/)\_darcs($|/)
 (^|/)\.hg($|/)
+(^|/)build($|/)
 (^|/)\.hgtags($|/)
-^PhotoUpload.log$
-^PhotoUpload.state$
-^PhotoUpload.state.old$
-^PhotoUpload.state.journal$
+
+syntax: glob
+*.framework
+*.mode1
+*.pbxuser
+*~.nib
+.DS_Store
