@@ -82,7 +82,7 @@
 		DA6AD92F07FA997D00E2D4EF /* PUImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImageList.h; sourceTree = "<group>"; };
 		DA6AD93007FA997D00E2D4EF /* PUImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImageList.m; sourceTree = "<group>"; };
 		DACD4B8807FA616E009C4765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
-		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5B138063353930026182E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		F52C09B603540EAB01A801C4 /* PhotoUpload.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PhotoUpload.icns; sourceTree = "<group>"; };
 		F5601AEF0353732F0109FEFA /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = English.lproj/Credits.html; sourceTree = "<group>"; };
@@ -277,9 +277,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = DA543B9609352A6C00185AF3 /* Build configuration list for PBXProject "PhotoUpload" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PhotoUpload */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				DACD4B6207FA616E009C4765 /* PhotoUpload */,
 			);
