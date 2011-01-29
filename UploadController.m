@@ -7,6 +7,7 @@
 #import "UploadParams.h"
 #import "SizeScaler.h"
 #import "PUImageList.h"
+#import "cJSON.h"
 
 @interface UploadController (Private)
 
@@ -21,51 +22,73 @@
     NSRunAlertPanel(title, msg, @"OK", nil, nil);
 }
 
+static char *getJSONString(cJSON *j, const char *name) {
+    assert(j);
+    cJSON *f = cJSON_GetObjectItem(j, name);
+    assert(f);
+    assert(f->type == cJSON_String);
+    return f->valuestring;
+}
+
+static cJSON *getJSONArray(cJSON *j, const char *name) {
+    assert(j);
+    cJSON *f = cJSON_GetObjectItem(j, name);
+    assert(f == NULL || f->type == cJSON_Array);
+    return f;
+}
+
 - (IBAction)authenticate:(id)sender
 {
     /* Set the defaults */
     [defaults setObject: [username stringValue] forKey:@"username"];
     [defaults setObject: [url stringValue] forKey:@"url"];
 
-    NSURL *u=[[NSURL alloc] initWithString:[url stringValue]];
+    NSURL *u=[[NSURL alloc] initWithString:[[url stringValue]
+											stringByAppendingPathComponent:@"/_design/photo-couch/_view/cat?group=true"]];
+	NSLog(@"Fetching from %@", u);
 
-	NSDictionary *argDict=[NSDictionary dictionaryWithObjectsAndKeys:
-		[username stringValue], @"username",
-		[password stringValue], @"password", nil];
-	
-	NSArray *argOrder=[NSArray arrayWithObjects: @"username", @"password", nil];
-	WSMethodInvocationRef rpcCall=WSMethodInvocationCreate(
-			(CFURLRef)u, (CFStringRef)@"getCategories.getAddable",
-			kWSXMLRPCProtocol);
-	
-	WSMethodInvocationSetParameters(rpcCall,
-									(CFDictionaryRef)argDict,
-									(CFArrayRef)argOrder);
-
-	NSDictionary *result =
-		(NSDictionary *)WSMethodInvocationInvoke(rpcCall);
+	NSStringEncoding enc;
+	NSError *e = NULL;
+	NSString *result = [[NSString alloc] initWithContentsOfURL:u
+													usedEncoding:&enc
+															error:&e];
 
 	NSLog(@"Result:  %@", result);
 
-	if(WSMethodResultIsFault((CFDictionaryRef)result)) {
-        [self alert:_str(@"Auth Exception")
-			message:[result objectForKey: (NSString *) kWSFaultString]];
-	} else {
-		id rv=[result objectForKey: (NSString *)kWSMethodInvocationResult];
-        /* Populate the categories */
-        [categories removeAllItems];
-        [categories addItemsWithTitles:rv];
+	cJSON *responseJson = cJSON_Parse([result UTF8String]);
+	if (responseJson) {
+		NSMutableArray *titles = [[NSMutableArray alloc] init];
 
-        /* Out with the auth */
-        [authWindow orderOut: self];
-        /* In with the uploader */
+		cJSON *rows = getJSONArray(responseJson, "rows");
+		size_t numRows = rows ? cJSON_GetArraySize(rows) : 0;
+		size_t i = 0;
+		for (i = 0; i < numRows; ++i) {
+			cJSON *ob = cJSON_GetArrayItem(rows, i);
+			assert(ob);
+
+			char *titleCStr = getJSONString(ob, "key");
+			NSString *title = [[NSString alloc] initWithCString: titleCStr];
+			[titles addObject:title];
+			[title release];
+		}
+
+		// Populate the categories
+		[categories removeAllItems];
+		[categories addItemsWithTitles:titles];
+
+		// Out with the auth
+		[authWindow orderOut: self];
+		// In with the uploader
 		[self openUploadWindow: self];
+
+		cJSON_Delete(responseJson);
+		[titles release];
+	} else {
+		[self alert:_str(@"Auth Exception")
+			message:[result objectForKey: (NSString *) kWSFaultString]];
 	}
 
-    // [defaults setObject: catList forKey:@"categories"];
-
     [u release];
-	CFRelease(rpcCall);
 	[result release];
 }
 

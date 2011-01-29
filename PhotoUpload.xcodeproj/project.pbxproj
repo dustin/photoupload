@@ -43,6 +43,8 @@
 		DACD4B8407FA616E009C4765 /* BatchUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF2D3036CDA3201ED6A41 /* BatchUploadController.m */; };
 		DACD4B8607FA616E009C4765 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE5B138063353930026182E /* CoreServices.framework */; };
+		DAF3F74C12F3C11400A0CD99 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = DAF3F74A12F3C11400A0CD99 /* cJSON.c */; };
+		DAF3F74D12F3C11400A0CD99 /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF3F74B12F3C11400A0CD99 /* cJSON.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,9 +83,11 @@
 		DA6AD91A07FA90A900E2D4EF /* PUImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImage.m; sourceTree = "<group>"; };
 		DA6AD92F07FA997D00E2D4EF /* PUImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUImageList.h; sourceTree = "<group>"; };
 		DA6AD93007FA997D00E2D4EF /* PUImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUImageList.m; sourceTree = "<group>"; };
-		DACD4B8807FA616E009C4765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACD4B8807FA616E009C4765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DACD4B8907FA616E009C4765 /* PhotoUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE5B138063353930026182E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		DAF3F74A12F3C11400A0CD99 /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		DAF3F74B12F3C11400A0CD99 /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
 		F52C09B603540EAB01A801C4 /* PhotoUpload.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PhotoUpload.icns; sourceTree = "<group>"; };
 		F5601AEF0353732F0109FEFA /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = English.lproj/Credits.html; sourceTree = "<group>"; };
 		F5601AF00353732F0109FEFA /* DumpMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumpMatrix.h; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DAF3F74A12F3C11400A0CD99 /* cJSON.c */,
+				DAF3F74B12F3C11400A0CD99 /* cJSON.h */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -244,6 +250,7 @@
 				DA6AD91B07FA90A900E2D4EF /* PUImage.h in Headers */,
 				DA6AD93107FA997D00E2D4EF /* PUImageList.h in Headers */,
 				DA543BA309352C7C00185AF3 /* DumpTable.h in Headers */,
+				DAF3F74D12F3C11400A0CD99 /* cJSON.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +285,14 @@
 			isa = PBXProject;
 			buildConfigurationList = DA543B9609352A6C00185AF3 /* Build configuration list for PBXProject "PhotoUpload" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PhotoUpload */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,6 +336,7 @@
 				DA6AD91C07FA90A900E2D4EF /* PUImage.m in Sources */,
 				DA6AD93207FA997D00E2D4EF /* PUImageList.m in Sources */,
 				DA543BA409352C7C00185AF3 /* DumpTable.m in Sources */,
+				DAF3F74C12F3C11400A0CD99 /* cJSON.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +411,6 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "/Users/dustin/My Apps";
 				LIBRARY_SEARCH_PATHS = "";
-				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = PhotoUpload;
 				SECTORDER_FLAGS = "";
@@ -420,11 +434,11 @@
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "/Users/dustin/My Apps";
 				LIBRARY_SEARCH_PATHS = "";
-				OPTIMIZATION_CFLAGS = "-Os";
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = PhotoUpload;
 				SECTORDER_FLAGS = "";
