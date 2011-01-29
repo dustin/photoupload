@@ -32,13 +32,17 @@
 static NSString *formatDate(NSDate *d) {
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd"];
-	return [dateFormatter stringFromDate:d];
+	NSString *rv = [dateFormatter stringFromDate:d];
+	[dateFormatter release];
+	return rv;
 }
 
 static NSString *formatDateTime(NSDate *d) {
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm"];
-	return [dateFormatter stringFromDate:d];
+	NSString *rv = [dateFormatter stringFromDate:d];
+	[dateFormatter release];
+	return rv;
 }
 
 static void addAttachment(cJSON *a, const char *name,
@@ -189,6 +193,7 @@ static void addScaledImage(cJSON *a, const char *name,
 			NSLog(@"There was an error");
 		}
 
+		[urlRequest release];
 		[postBody release];
 		[ss release];
         [origData release];
