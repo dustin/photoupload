@@ -129,6 +129,7 @@ static void addScaledImage(cJSON *a, const char *name,
 
 		cJSON_AddStringToObject(doc, "_id", [[origData md5] UTF8String]);
 		cJSON_AddStringToObject(doc, "type", "photo");
+		cJSON_AddStringToObject(doc, "addedby", [[_batch username] UTF8String]);
 		cJSON_AddStringToObject(doc, "category", [[_batch category] UTF8String]);
 		cJSON_AddStringToObject(doc, "descr", [[_batch description] UTF8String]);
 		cJSON_AddStringToObject(doc, "taken", [formatDate([_batch taken]) UTF8String]);
