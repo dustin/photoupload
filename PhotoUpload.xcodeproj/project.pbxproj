@@ -45,6 +45,11 @@
 		DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE5B138063353930026182E /* CoreServices.framework */; };
 		DAF3F74C12F3C11400A0CD99 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = DAF3F74A12F3C11400A0CD99 /* cJSON.c */; };
 		DAF3F74D12F3C11400A0CD99 /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF3F74B12F3C11400A0CD99 /* cJSON.h */; };
+		DAF3F7BD12F3D25700A0CD99 /* NSData-Base64Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF3F7BB12F3D25700A0CD99 /* NSData-Base64Extensions.h */; };
+		DAF3F7BE12F3D25700A0CD99 /* NSData-Base64Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF3F7BC12F3D25700A0CD99 /* NSData-Base64Extensions.m */; };
+		DAF3F7C212F3D32500A0CD99 /* NSData+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = DAF3F7C012F3D32500A0CD99 /* NSData+MD5.h */; };
+		DAF3F7C312F3D32500A0CD99 /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF3F7C112F3D32500A0CD99 /* NSData+MD5.m */; };
+		DAF3F81912F3DC2D00A0CD99 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF3F81812F3DC2D00A0CD99 /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +93,11 @@
 		DAE5B138063353930026182E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		DAF3F74A12F3C11400A0CD99 /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
 		DAF3F74B12F3C11400A0CD99 /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		DAF3F7BB12F3D25700A0CD99 /* NSData-Base64Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-Base64Extensions.h"; sourceTree = "<group>"; };
+		DAF3F7BC12F3D25700A0CD99 /* NSData-Base64Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-Base64Extensions.m"; sourceTree = "<group>"; };
+		DAF3F7C012F3D32500A0CD99 /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		DAF3F7C112F3D32500A0CD99 /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
+		DAF3F81812F3DC2D00A0CD99 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
 		F52C09B603540EAB01A801C4 /* PhotoUpload.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PhotoUpload.icns; sourceTree = "<group>"; };
 		F5601AEF0353732F0109FEFA /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = English.lproj/Credits.html; sourceTree = "<group>"; };
 		F5601AF00353732F0109FEFA /* DumpMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DumpMatrix.h; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 				DACD4B8607FA616E009C4765 /* Cocoa.framework in Frameworks */,
 				DACD4B8707FA616E009C4765 /* CoreServices.framework in Frameworks */,
 				DA43FC2A0C03E17100825C06 /* Sparkle.framework in Frameworks */,
+				DAF3F81912F3DC2D00A0CD99 /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +142,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DAF3F7BB12F3D25700A0CD99 /* NSData-Base64Extensions.h */,
+				DAF3F7BC12F3D25700A0CD99 /* NSData-Base64Extensions.m */,
 				DA6AD92F07FA997D00E2D4EF /* PUImageList.h */,
 				DA6AD93007FA997D00E2D4EF /* PUImageList.m */,
 				DA6AD91907FA90A900E2D4EF /* PUImage.h */,
@@ -154,6 +167,8 @@
 				F5BAF2D3036CDA3201ED6A41 /* BatchUploadController.m */,
 				DA543BA109352C7C00185AF3 /* DumpTable.h */,
 				DA543BA209352C7C00185AF3 /* DumpTable.m */,
+				DAF3F7C012F3D32500A0CD99 /* NSData+MD5.h */,
+				DAF3F7C112F3D32500A0CD99 /* NSData+MD5.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -172,6 +187,7 @@
 			children = (
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				DAF3F81812F3DC2D00A0CD99 /* libcrypto.dylib */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -251,6 +267,8 @@
 				DA6AD93107FA997D00E2D4EF /* PUImageList.h in Headers */,
 				DA543BA309352C7C00185AF3 /* DumpTable.h in Headers */,
 				DAF3F74D12F3C11400A0CD99 /* cJSON.h in Headers */,
+				DAF3F7BD12F3D25700A0CD99 /* NSData-Base64Extensions.h in Headers */,
+				DAF3F7C212F3D32500A0CD99 /* NSData+MD5.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +355,8 @@
 				DA6AD93207FA997D00E2D4EF /* PUImageList.m in Sources */,
 				DA543BA409352C7C00185AF3 /* DumpTable.m in Sources */,
 				DAF3F74C12F3C11400A0CD99 /* cJSON.c in Sources */,
+				DAF3F7BE12F3D25700A0CD99 /* NSData-Base64Extensions.m in Sources */,
+				DAF3F7C312F3D32500A0CD99 /* NSData+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,5 @@
 // arch-tag: 4FAC61DA-9196-11D8-88DB-000A957659CC
 
-#import <CoreServices/CoreServices.h>
-
 #import "UploadController.h"
 #import "UploadThread.h"
 #import "UploadParams.h"
