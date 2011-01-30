@@ -54,10 +54,12 @@ static cJSON *getJSONArray(cJSON *j, const char *name) {
 	NSLog(@"Result:  %@", result);
 
 	cJSON *responseJson = cJSON_Parse([result UTF8String]);
-	if (responseJson) {
+	cJSON *rows = responseJson ? getJSONArray(responseJson, "rows") : NULL;
+	if (e) {
+		[self alert:_str(@"Auth Exception")	message:[e description]];
+	} else if (responseJson && rows) {
 		NSMutableArray *titles = [[NSMutableArray alloc] init];
 
-		cJSON *rows = getJSONArray(responseJson, "rows");
 		size_t numRows = rows ? cJSON_GetArraySize(rows) : 0;
 		size_t i = 0;
 		for (i = 0; i < numRows; ++i) {
@@ -82,8 +84,16 @@ static cJSON *getJSONArray(cJSON *j, const char *name) {
 		cJSON_Delete(responseJson);
 		[titles release];
 	} else {
-		[self alert:_str(@"Auth Exception")
-			message:[result objectForKey: (NSString *) kWSFaultString]];
+		// {"error":"not_found","reason":"missing"}
+		NSString *msg = NULL;
+		if (responseJson) {
+			const char *error = getJSONString(responseJson, "reason");
+			msg = [NSString stringWithFormat: @"Error:  %s\n(check the URL and stuff)", error];
+			cJSON_Delete(responseJson);
+		} else {
+			msg = @"No idea what happened.";
+		}
+		[self alert:_str(@"Auth Exception")	message:msg];
 	}
 
     [u release];
