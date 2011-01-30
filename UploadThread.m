@@ -139,7 +139,8 @@ static void addScaledImage(cJSON *a, const char *name,
 		cJSON_AddStringToObject(doc, "taken", [formatDate([_batch taken]) UTF8String]);
 		cJSON_AddStringToObject(doc, "ts", [formatDateTime([NSDate date]) UTF8String]);
 		cJSON_AddNumberToObject(doc, "size", [origData length]);
-		cJSON_AddStringToObject(doc, "extension", [[[f filename] pathExtension] UTF8String]);
+		cJSON_AddStringToObject(doc, "extension",
+                                [[[[f filename] pathExtension] lowercaseString] UTF8String]);
 
 		NSImage *origImage = [[NSImage alloc] initWithData: origData];
 		NSSize origSize = [origImage size];
