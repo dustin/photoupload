@@ -42,7 +42,7 @@ static cJSON *getJSONArray(cJSON *j, const char *name) {
     [defaults setObject: [url stringValue] forKey:@"url"];
 
     NSURL *u=[[NSURL alloc] initWithString:[[url stringValue]
-											stringByAppendingPathComponent:@"/_design/photo-couch/_view/cat?group=true"]];
+											stringByAppendingPathComponent:@"/_design/app/_view/cat?group=true"]];
 	NSLog(@"Fetching from %@", u);
 
 	NSStringEncoding enc;
