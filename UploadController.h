@@ -15,7 +15,7 @@
 @interface UploadController : NSObject
 {
     IBOutlet NSWindow *authWindow;
-    IBOutlet NSPopUpButton *categories;
+    IBOutlet NSComboBox *categories;
     IBOutlet NSTextField *dateTaken;
     IBOutlet NSTextField *description;
     IBOutlet NSTextField *keywords;

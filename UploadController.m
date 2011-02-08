@@ -74,7 +74,7 @@ static cJSON *getJSONArray(cJSON *j, const char *name) {
 
 		// Populate the categories
 		[categories removeAllItems];
-		[categories addItemsWithTitles:titles];
+		[categories addItemsWithObjectValues: titles];
 
 		// Out with the auth
 		[authWindow orderOut: self];
@@ -147,7 +147,7 @@ static cJSON *getJSONArray(cJSON *j, const char *name) {
     if (rv == NSOKButton) {
         id batch = [NSKeyedUnarchiver unarchiveObjectWithFile:
             [[filePanel filenames] objectAtIndex: 0]];
-        [categories selectItemWithTitle: [batch category]];
+        [batch category];
         [dateTaken setStringValue:
             [[batch taken] descriptionWithCalendarFormat: @"%Y/%m/%d"
                                                 timeZone: nil
@@ -252,7 +252,7 @@ static cJSON *getJSONArray(cJSON *j, const char *name) {
             message:_str(@"A.B.NoDescription")];
         return;
     }
-    NSString *cat=[categories titleOfSelectedItem];
+    NSString *cat=[categories stringValue];
     NSString *u=[username stringValue];
     NSString *p=[password stringValue];    
     
