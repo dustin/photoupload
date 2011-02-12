@@ -54,7 +54,8 @@ static void addAttachment(cJSON *a, const char *name,
 	cJSON_AddItemToObject(a, name, doc);
 }
 
-static void addScaledImage(cJSON *a, const char *name,
+static void addScaledImage(cJSON *a, const char *name, const char *mimeType,
+						   NSBitmapImageFileType repType,
 						   NSSize size, NSImage *image) {
 	NSArray *reps = [image representations];
 	NSEnumerator *e=[reps objectEnumerator];
@@ -81,13 +82,13 @@ static void addScaledImage(cJSON *a, const char *name,
 			NSMutableDictionary *props = [[NSMutableDictionary alloc] init];
 			[props setObject:[NSNumber numberWithFloat: 0.2]
 					  forKey:NSImageCompressionFactor];
-			NSData *d = [scaledImageRep representationUsingType:NSJPEGFileType
+			NSData *d = [scaledImageRep representationUsingType:repType
 													 properties:props];
 
 			NSLog(@"Storing %d bytes scaled to %dx%d",
 				  [d length], (int)size.width, (int)size.height);
 
-			addAttachment(a, name, "image/jpeg", d);
+			addAttachment(a, name, mimeType, d);
 
 			[props release];
 			[auxImage release];
@@ -166,9 +167,23 @@ static void addScaledImage(cJSON *a, const char *name,
 		cJSON_AddItemToObject(doc, "keywords", keywords);
 
 		cJSON *attachments = cJSON_CreateObject();
-		addAttachment(attachments, "original.jpg", "image/jpeg", origData);
-		addScaledImage(attachments, "800x600.jpg", [ss scaleTo:eightBySix], origImage);
-		addScaledImage(attachments, "thumb.jpg", thisTnSize, origImage);
+		const char *mimeType = "image/jpeg";
+		NSBitmapImageFileType repType = NSJPEGFileType;
+		if ([extension isEqualToString:@"png"]) {
+			mimeType = "image/png";
+			repType = NSPNGFileType;
+		}
+		addAttachment(attachments,
+					  [[NSString stringWithFormat:@"original.%@", extension] UTF8String],
+					  mimeType, origData);
+		addScaledImage(attachments,
+					   [[NSString stringWithFormat:@"800x600.%@", extension] UTF8String],
+					   mimeType, repType,
+					   [ss scaleTo:eightBySix], origImage);
+		addScaledImage(attachments,
+					   [[NSString stringWithFormat:@"thumb.%@", extension] UTF8String],
+					   mimeType, repType,
+					   thisTnSize, origImage);
 
 		cJSON_AddItemToObject(doc, "_attachments", attachments);
 
